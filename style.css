@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-color: #880E4F;
+    color: #fff;
+    color: lime;
+    overflow: hidden;
+    
+}
+
+li {
+    list-style: none;
+}
+h1 {
+    line-height: 1.4;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    /* padding: 0 1em; */
+    /* margin-inline: auto; */
+    transition: margin 0.3s ease-out;
+}
+
+.choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.btn {
+    background-color: lime;
+    color: #880E4F;
+    font-family: inherit;
+    border: 0;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+.btn:focus {
+   outline: none;
+}
+.btn:active {
+   transform: scale(0.98);
+}
+.btn:hover{
+    opacity: 0.9;
+}
+
+ul.insects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;    
+}
+ul.insects-list li{
+    margin: 10px;
+}
+
+.choose-insect-btn {
+    background: transparent;
+    border: 1px solid limegreen;
+    color: lime;
+    font-family: inherit;
+    width: 150px;
+    height: 180px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.choose-insect-btn:hover {
+    background-color: lime;
+    color: #880E4F;
+}
+.choose-insect-btn:active {
+    opacity: 0.9;
+}
+
+.game-container {
+    position: relative;
+}
+.time,
+.score {
+    position: absolute;
+    top: 20px;
+}
+
+.time {
+    left: 20px;
+}
+.score {
+    right: 20px;
+}
+
+h5.message{
+    line-height: 2;
+    background: #0003;
+    width: 100%;
+    padding: 1em;
+    z-index: 100;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    transition: transform 0.2s ease-in;
+}
+
+.message.visible {
+    transform: translate(-50%, 150%);
+    opacity: 1;
+}
+
+.insect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /* top: 200px;
+    left: 300px; */
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-out;
+}
+.insect img {
+    width: 100px;
+    height: 100px;
+}
+.insect.caught{
+    transform: translate(-50%, -50%) scale(0);
+}
+/* js classes */
+.screen.up{
+    margin-top: -100vh;
+}
